@@ -1,0 +1,303 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Header*/
+header {
+    max-width: 100vw;
+    height: 100vh;
+}
+
+/* Define the main styles for the navbar */
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    min-height: 50px;
+    max-height: max-content;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: gray;
+    z-index: 10;
+}
+
+.nav-links {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Define the main styles for the hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100%;
+    background-image: url("../imgs/ed.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.paragraph-container {
+    background-color: hsl(201, 61%, 86%);
+    padding: 20px;
+    border-radius: 10px;
+    height: max-content;
+}
+
+/* Define the main styles for the section-1(About Us) */
+#About {
+    max-width: 100vw;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #CEE6F3;
+}
+
+#About .container-1 p {
+    margin-top: 20px;
+    text-align: center;
+    max-height: 300px;
+}
+
+#About .container-1 h1 {
+    text-align: center;
+}
+
+.container-1 {
+    max-height: 400px;
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+/* Define the main styles for the section-2(OurServices) */
+#OurServices {
+    background-color: #FFDBAA;
+}
+
+#OurServices h1 {
+    padding: 40px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.container .card h3 {
+    padding: 10px 0;
+}
+
+/* Define the main styles for the section-3(Specialization) */
+#Specialization {
+    background-color: #CEE6F3;
+}
+
+#Specialization h1 {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Define the main styles for the section-4(Our Teachers) */
+#OurTeachers {
+    background-color: #FFDBAA;
+}
+
+#OurTeachers .card img {
+    width: 260px;
+    height: 150px;
+    text-align: center;
+}
+
+#OurTeachers h1 {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Define the main styles for the section-5(plans) */
+#Plans {
+    background-color: #CEE6F3;
+}
+
+#Plans h1 {
+    padding: 40px;
+    text-align: center;
+}
+
+#Plans .card h2 {
+    padding: 10px;
+}
+
+#Plans .card img {
+    width: 260px;
+    height: 150px;
+    text-align: center;
+}
+
+#Plans .card .price {
+    width: 100%;
+    background-color: #FAE392;
+    border: 3px solid #F1C93B;
+}
+
+#Plans .card ul {
+    margin: 10px 0;
+}
+
+#Plans .card ul li {
+    text-align: left;
+    padding: 5px;
+}
+
+#Plans .card {
+    background-color: #FFDBAA;
+}
+
+/* Define the main styles for the section-6(Contact) */
+#Contact {
+    background-color: #FFDBAA;
+}
+
+#Contact .form-container h2 {
+    text-align: center;
+    padding: 40px;
+
+}
+
+#Contact p {
+    text-align: center;
+    padding: 5px;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+
+    padding: 10px;
+    background-color: gray;
+}
+
+/* Define the main styles for the footer */
+footer div {
+    background-color: gray;
+}
+
+footer div ul {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+footer div ul li {
+    list-style: none;
+}
+
+footer div ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+/* Media queries for responsive design (navbar) */
+
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Media queries for responsive design (OurServices & Specialization ) */
+@media (max-width: 1000px) {
+    .card {
+        width: 90%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+/* Media queries for responsive design (card include photo) */
+@media (max-width: 768px) {
+    #Plans .card img {
+        width: 200px;
+        height: 150px;
+        text-align: center;
+    }
+
+    #OurTeachers .card img {
+        width: 200px;
+        height: 150px;
+        text-align: center;
+    }
+
+}
+
+/* Media queries for responsive design (Form) */
+@media (max-width: 600px) {
+    .form-container {
+        max-width: 100%;
+    }
+}
